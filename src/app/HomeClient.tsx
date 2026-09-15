@@ -300,7 +300,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Selected architectural works">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 border-b border-neutral-100 dark:border-white/5 pb-8">
                         <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">Selected Works</h2>
-                        <Link href="/portfolio" aria-label="View all archived projects" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
+                        <Link href="/portfolio" aria-label="View all archived projects" className="self-end sm:self-auto font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
                             SEE MORE PROJECTS
                             <ArrowUpRight size={11} />
                         </Link>

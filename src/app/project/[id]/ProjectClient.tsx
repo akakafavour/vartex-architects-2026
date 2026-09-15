@@ -169,7 +169,7 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                                 <div className={`text-xl lg:text-3xl font-light leading-relaxed text-primary/80 dark:text-white/80 italic ${descriptionExpanded ? "" : "line-clamp-4 lg:line-clamp-none"}`}>
                                     "{project.description}"
                                 </div>
-                                <button type="button" onClick={() => setDescriptionExpanded((expanded) => !expanded)} className="mt-0 self-start font-mono text-[10px] font-bold tracking-[0.25em] text-primary dark:text-white underline underline-offset-4 lg:hidden">
+                                <button type="button" onClick={() => setDescriptionExpanded((expanded) => !expanded)} className="-mt-4 self-start font-mono text-[10px] font-bold tracking-[0.25em] text-primary dark:text-white underline underline-offset-4 lg:hidden">
                                     {descriptionExpanded ? "SHOW LESS" : "READ MORE"}
                                 </button>
                             </div>
