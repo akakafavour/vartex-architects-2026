@@ -42,3 +42,6 @@ build/
 handoff.md
 integration-guide.md
 GMB-Client-Handover-Guide.md
+
+# Local workspace
+.zcode/

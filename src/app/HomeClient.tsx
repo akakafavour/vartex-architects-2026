@@ -182,7 +182,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                                 Architecture shaped by idea, context, and precision.
                             </h1>
                             <p className="text-lg lg:text-xl font-light text-primary/60 dark:text-white/60 max-w-md leading-relaxed">
-                                VARTEX designs buildings that last, combining solid engineering with creative, thoughtful design.
+                                Here at Vartex Architects we design buildings that last, combining solid engineering with creative and thoughtful design.
                             </p>
                         </div>
 
@@ -291,17 +291,18 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                     <div className="lg:col-span-1 border-r border-neutral-200 dark:border-white/10 hidden lg:block h-32 self-center"></div>
                     <div className="lg:col-span-7">
                         <p className="text-2xl lg:text-3xl font-light leading-snug text-primary/80 dark:text-white/80 max-w-3xl">
-                            We believe a building is not just a structure, but a dialogue between the inhabitant and the environment. Every line drawn serves a purpose. Simplicity is the ultimate sophistication. / Leonardo da Vinci
+                            We believe a building is not just a structure, but a dialogue between the inhabitant and the environment. Every line drawn serves a purpose. Simplicity is the ultimate sophistication.
                         </p>
                     </div>
                 </section>
 
                 {/* SELECTED WORKS */}
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Selected architectural works">
-                    <div className="flex justify-between items-end border-b border-neutral-100 dark:border-white/5 pb-8">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 border-b border-neutral-100 dark:border-white/5 pb-8">
                         <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">Selected Works</h2>
-                        <Link href="/portfolio" aria-label="View all archived projects" className="font-mono text-[10px] tracking-[0.3em] text-primary/40 dark:text-white/40 hover:text-primary dark:hover:text-white transition-colors uppercase">
+                        <Link href="/portfolio" aria-label="View all archived projects" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
                             SEE MORE PROJECTS
+                            <ArrowUpRight size={11} />
                         </Link>
                     </div>
 
@@ -396,8 +397,9 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                         <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">02 / PROCESS</span>
                         <div className="flex justify-between items-end">
                             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">From Sketch to Stone</h2>
-                            <Link href="/process" className="font-mono text-[10px] tracking-[0.3em] text-primary/40 dark:text-white/40 hover:text-primary dark:hover:text-white transition-colors uppercase hidden sm:block">
+                            <Link href="/process" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
                                 VIEW DETAILED PROCESS
+                                <ArrowUpRight size={11} />
                             </Link>
                         </div>
                     </div>

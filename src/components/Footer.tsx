@@ -18,7 +18,7 @@ export default function Footer() {
                 {/* Brand Column */}
                 <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-8">
                     <div className="flex flex-col gap-0 items-start">
-                        <div className="relative mb-4 lg:mb-6">
+                        <div className="relative mb-1 lg:mb-2">
                             {/* Light mode: black logo */}
                             <Image
                                 src="/brand-logo-light-transparent.png"
