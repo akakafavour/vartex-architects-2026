@@ -109,7 +109,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                     </div>
                 </section>
 
-                <section ref={containerRef} className="px-8 lg:px-24 pt-6 pb-12 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24" aria-label="Project grid">
+                <section ref={containerRef} className="px-8 lg:px-24 pt-0 pb-12 lg:pt-12 lg:pb-24 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24" aria-label="Project grid">
                     {currentProjects.map((project, index) => {
                         const ProjectWrapper = project.isComingSoon ? 'div' : Link;
                         const wrapperProps = project.isComingSoon 
