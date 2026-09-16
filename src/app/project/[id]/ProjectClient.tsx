@@ -163,13 +163,13 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                         </section>
 
                         {/* Content Section */}
-                        <section className="px-8 lg:px-24 py-32 flex flex-col gap-24 relative z-10 bg-white dark:bg-[#0a0a0a]">
-                            <div className="flex flex-col gap-8 w-full">
+                        <section className="px-8 py-16 lg:px-24 lg:py-32 flex flex-col gap-12 lg:gap-24 relative z-10 bg-white dark:bg-[#0a0a0a]">
+                            <div className="flex w-full flex-col gap-5 lg:gap-8">
                                 <h2 className="text-4xl font-black uppercase tracking-tight text-primary dark:text-white">Project Overview.</h2>
                                 <div className={`text-xl lg:text-3xl font-light leading-relaxed text-primary/80 dark:text-white/80 italic ${descriptionExpanded ? "" : "line-clamp-4 lg:line-clamp-none"}`}>
                                     "{project.description}"
                                 </div>
-                                <button type="button" onClick={() => setDescriptionExpanded((expanded) => !expanded)} className="-mt-4 self-start font-mono text-[10px] font-bold tracking-[0.25em] text-primary dark:text-white underline underline-offset-4 lg:hidden">
+                                <button type="button" onClick={() => setDescriptionExpanded((expanded) => !expanded)} className="mt-0 self-start font-mono text-[10px] font-bold tracking-[0.25em] text-primary dark:text-white underline underline-offset-4 lg:hidden">
                                     {descriptionExpanded ? "SHOW LESS" : "READ MORE"}
                                 </button>
                             </div>

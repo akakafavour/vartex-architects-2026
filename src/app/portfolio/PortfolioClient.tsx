@@ -81,16 +81,16 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
 
             <main className="flex-grow architectural-grid bg-white dark:bg-background-dark">
                 {/* Header Section */}
-                <section className="px-8 lg:px-24 pt-24 pb-8 lg:py-24 flex flex-col items-center gap-12 border-b border-neutral-100 dark:border-white/5" aria-label="Portfolio header">
+                <section className="px-8 lg:px-24 pt-10 pb-8 lg:py-24 flex flex-col items-center gap-6 lg:gap-12 border-b border-neutral-100 dark:border-white/5" aria-label="Portfolio header">
                     <div className="flex flex-col items-center gap-4 text-center">
-                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">Selected Projects — 2026</span>
+                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">SELECTED PROJECTS</span>
                         <h1 className="text-6xl lg:text-9xl font-black uppercase tracking-tighter leading-none text-primary dark:text-white">
                             PROJECTS.
                         </h1>
                     </div>
 
                     {/* Filter UI */}
-                    <div className="flex flex-wrap justify-center gap-4 lg:gap-8 border-y border-neutral-100 dark:border-white/5 py-4 w-full" role="tablist" aria-label="Project categories">
+                    <div className="flex flex-wrap justify-center gap-4 lg:gap-8 border-y border-neutral-100 dark:border-white/5 py-2 lg:py-4 w-full" role="tablist" aria-label="Project categories">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
@@ -109,7 +109,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                     </div>
                 </section>
 
-                <section ref={containerRef} className="px-8 lg:px-24 py-12 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24" aria-label="Project grid">
+                <section ref={containerRef} className="px-8 lg:px-24 pt-6 pb-12 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24" aria-label="Project grid">
                     {currentProjects.map((project, index) => {
                         const ProjectWrapper = project.isComingSoon ? 'div' : Link;
                         const wrapperProps = project.isComingSoon 

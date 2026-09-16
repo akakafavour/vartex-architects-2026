@@ -137,7 +137,7 @@ export default function ProcessPage() {
                 {/* Intro Section */}
                 <div className="flex flex-col gap-12 max-w-5xl fade-in">
                     <div className="flex flex-col gap-6">
-                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">02 / OUR METHODOLOGY</span>
+                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">OUR METHODOLOGY</span>
                         <h1 className="text-6xl lg:text-[8rem] font-black tracking-tighter leading-[0.85] text-primary dark:text-white uppercase">
                             Sketch <br /> To Stone.
                         </h1>
