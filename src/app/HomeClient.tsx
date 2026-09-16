@@ -298,9 +298,9 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
 
                 {/* SELECTED WORKS */}
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Selected architectural works">
-                    <div className="flex w-full items-center justify-between gap-4 border-b border-neutral-100 dark:border-white/5 pb-8">
+                    <div className="flex w-full flex-col items-start gap-5 border-b border-neutral-100 dark:border-white/5 pb-8 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
                         <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">Selected Works</h2>
-                        <Link href="/portfolio" aria-label="View all archived projects" className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase">
+                        <Link href="/portfolio" aria-label="View all archived projects" className="inline-flex shrink-0 self-end items-center gap-2 whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase sm:self-auto">
                             <span>SEE MORE PROJECTS</span>
                             <ArrowUpRight size={16} />
                         </Link>
@@ -393,9 +393,9 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Our architectural process">
                     <div className="flex flex-col gap-4">
                         <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">PROCESS</span>
-                        <div className="flex w-full items-center justify-between gap-4">
+                        <div className="flex w-full flex-col items-start gap-5 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
                             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">From Sketch to Stone</h2>
-                            <Link href="/process" className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase">
+                            <Link href="/process" className="inline-flex shrink-0 self-end items-center gap-2 whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase sm:self-auto">
                                 <span>VIEW DETAILED PROCESS</span>
                                 <ArrowUpRight size={16} />
                             </Link>
