@@ -163,8 +163,8 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                         </section>
 
                         {/* Content Section */}
-                        <section className="px-8 lg:px-24 py-32 flex flex-col gap-24 relative z-10 bg-white dark:bg-[#0a0a0a]">
-                            <div className="flex flex-col gap-8 w-full">
+                        <section className="px-8 lg:px-24 py-32 flex flex-col gap-12 lg:gap-24 relative z-10 bg-white dark:bg-[#0a0a0a]">
+                            <div className="flex flex-col gap-4 lg:gap-8 w-full">
                                 <h2 className="text-4xl font-black uppercase tracking-tight text-primary dark:text-white">Project Overview.</h2>
                                 <div className={`text-xl lg:text-3xl font-light leading-relaxed text-primary/80 dark:text-white/80 italic ${descriptionExpanded ? "" : "line-clamp-4 lg:line-clamp-none"}`}>
                                     "{project.description}"

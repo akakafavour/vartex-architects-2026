@@ -16,9 +16,9 @@ export default function Footer() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
 
                 {/* Brand Column */}
-                <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-8">
+                <div className="lg:col-span-4 flex flex-col gap-1 lg:gap-2">
                     <div className="flex flex-col gap-0 items-start">
-                        <div className="relative mb-1 lg:mb-2">
+                        <div className="relative">
                             {/* Light mode: black logo */}
                             <Image
                                 src="/brand-logo-light-transparent.png"
