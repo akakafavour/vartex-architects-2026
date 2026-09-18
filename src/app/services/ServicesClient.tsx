@@ -372,14 +372,15 @@ export default function ServicesClient({ initialPage = "index" }: { initialPage?
             gsap.utils.toArray<HTMLElement>(".service-card-image-stage").forEach((stage) => {
                 const image = stage.querySelector<HTMLElement>(".service-card-image");
                 if (!image) return;
-                gsap.fromTo(image, { clipPath: "inset(100% 0 0 0)", yPercent: 12 }, {
+                // Clip-only reveal: the image element carries CSS transition-transform
+                // classes for the hover/tap zoom, so GSAP must never write transform
+                // properties on it — a GSAP yPercent here gets re-smoothed by the CSS
+                // transition every frame and reads as a bounce/snap-back.
+                gsap.fromTo(image, { clipPath: "inset(100% 0 0 0)" }, {
                     clipPath: "inset(0% 0 0 0)",
-                    yPercent: 0,
                     duration: 0.55,
                     ease: "power3.out",
-                    // Inline transform/scale from GSAP would permanently override the
-                    // hover/tap zoom classes, so clear them once the reveal completes.
-                    clearProps: "all",
+                    clearProps: "clipPath",
                     scrollTrigger: { trigger: stage, start: "top 92%", once: true }
                 });
             });

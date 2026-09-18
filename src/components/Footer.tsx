@@ -37,7 +37,7 @@ export default function Footer() {
                             />
                         </div>
                     </div>
-                    <p className="text-sm font-light text-primary/60 dark:text-white/60 max-w-xs leading-relaxed italic">
+                    <p className="-mt-2.5 lg:-mt-4 text-sm font-light text-primary/60 dark:text-white/60 max-w-xs leading-relaxed italic">
                         Architecture built on precision and purpose.
                     </p>
                 </div>

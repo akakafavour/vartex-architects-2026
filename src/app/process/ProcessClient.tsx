@@ -199,7 +199,7 @@ export default function ProcessPage() {
                 </div>
 
                 {/* Closing Statement */}
-                <div className="mt-12 lg:mt-32 flex flex-col items-center text-center gap-6 lg:gap-12 py-8 lg:py-24 border-t border-neutral-100 dark:border-white/5 fade-in">
+                <div className="mt-8 lg:mt-16 flex flex-col items-center text-center gap-6 lg:gap-12 py-8 lg:py-14 border-t border-neutral-100 dark:border-white/5 fade-in">
                     <div className="flex flex-col gap-4">
                         <span className="font-mono text-[10px] tracking-[0.5em] text-primary/30 dark:text-white/30 uppercase">THE RESULT</span>
                         <h3 className="text-4xl lg:text-7xl font-black tracking-tighter text-primary dark:text-white uppercase">Architectural Excellence.</h3>
