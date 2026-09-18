@@ -177,7 +177,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                     {/* Left: Text Content */}
                     <div className="w-full lg:w-[40%] p-8 pt-24 md:p-16 lg:p-24 flex flex-col justify-center gap-12 lg:border-r border-neutral-100 dark:border-white/5 hero-text">
                         <div className="flex flex-col gap-6">
-                            <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">INTRO</span>
+                            <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">00 / INTRO</span>
                             <h1 className="text-5xl lg:text-7xl font-black tracking-tighter leading-[0.9] text-primary dark:text-white">
                                 Architecture shaped by idea, context, and precision.
                             </h1>
@@ -285,7 +285,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                 {/* PHILOSOPHY SECTION */}
                 <section className="px-8 lg:px-24 py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start border-b border-neutral-100 dark:border-white/5 bg-neutral-50 dark:bg-neutral-900/20" aria-label="Our practice philosophy">
                     <div className="lg:col-span-4 flex flex-col gap-4">
-                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">PHILOSOPHY</span>
+                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">01 / PHILOSOPHY</span>
                         <h2 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-primary dark:text-white">Function Meets Form</h2>
                     </div>
                     <div className="lg:col-span-1 border-r border-neutral-200 dark:border-white/10 hidden lg:block h-32 self-center"></div>
@@ -298,11 +298,11 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
 
                 {/* SELECTED WORKS */}
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Selected architectural works">
-                    <div className="flex w-full flex-col items-start gap-5 border-b border-neutral-100 dark:border-white/5 pb-8 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 border-b border-neutral-100 dark:border-white/5 pb-8">
                         <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">Selected Works</h2>
-                        <Link href="/portfolio" aria-label="View all archived projects" className="inline-flex shrink-0 self-end items-center gap-2 whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase sm:self-auto">
-                            <span>SEE MORE PROJECTS</span>
-                            <ArrowUpRight size={16} />
+                        <Link href="/portfolio" aria-label="View all archived projects" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
+                            SEE MORE PROJECTS
+                            <ArrowUpRight size={11} />
                         </Link>
                     </div>
 
@@ -377,6 +377,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                                 <h4 className="text-xl font-bold uppercase tracking-tight text-primary dark:text-white transition-colors duration-500 title-layer">Architectural Design</h4>
                                 <p className="text-xs text-primary/60 dark:text-white/60 leading-relaxed italic transition-colors duration-500 text-layer">Crafting spaces that balance structural integrity with openness to nature.</p>
                             </div>
+                            <span className="font-mono text-[10px] text-primary/20 dark:text-white/20">01</span>
                         </Link>
                         {/* Item 2: Interior Design */}
                         <Link href="/services?service=interior" className="bg-white dark:bg-background-dark p-8 lg:p-10 flex flex-col gap-6 lg:gap-8 group service-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:focus-visible:ring-white">
@@ -385,6 +386,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                                 <h4 className="text-xl font-bold uppercase tracking-tight text-primary dark:text-white transition-colors duration-500 title-layer">Interior Design</h4>
                                 <p className="text-xs text-primary/60 dark:text-white/60 leading-relaxed italic transition-colors duration-500 text-layer">Shaping interiors with the right materials, lighting, and proportions.</p>
                             </div>
+                            <span className="font-mono text-[10px] text-primary/20 dark:text-white/20">02</span>
                         </Link>
                     </div>
                 </section>
@@ -392,12 +394,12 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                 {/* PROCESS SECTION */}
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Our architectural process">
                     <div className="flex flex-col gap-4">
-                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">PROCESS</span>
-                        <div className="flex w-full flex-col items-start gap-5 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">02 / PROCESS</span>
+                        <div className="flex justify-between items-end">
                             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">From Sketch to Stone</h2>
-                            <Link href="/process" className="inline-flex shrink-0 self-end items-center gap-2 whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase sm:self-auto">
-                                <span>VIEW DETAILED PROCESS</span>
-                                <ArrowUpRight size={16} />
+                            <Link href="/process" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
+                                VIEW DETAILED PROCESS
+                                <ArrowUpRight size={11} />
                             </Link>
                         </div>
                     </div>

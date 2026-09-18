@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
 
                 {/* Brand Column */}
-                <div className="lg:col-span-4 flex flex-col gap-3 lg:gap-8">
+                <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-8">
                     <div className="flex flex-col gap-0 items-start">
                         <div className="relative mb-1 lg:mb-2">
                             {/* Light mode: black logo */}
@@ -43,7 +43,7 @@ export default function Footer() {
                 </div>
 
                 {/* Social Column / SVG Icons on mobile, text on desktop */}
-                <div className="lg:col-span-2 lg:col-start-5 flex flex-col gap-3 lg:gap-8">
+                <div className="lg:col-span-2 lg:col-start-5 flex flex-col gap-4 lg:gap-8">
                     <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">SOCIALS</span>
 
                     {/* SVG Icons / visible on both mobile and desktop */}
@@ -129,7 +129,7 @@ export default function Footer() {
 
 
                 {/* Contact Column */}
-                <div className="lg:col-span-3 lg:col-start-10 flex flex-col gap-3 lg:gap-8 lg:text-right">
+                <div className="lg:col-span-3 lg:col-start-10 flex flex-col gap-4 lg:gap-8 lg:text-right">
                     <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">CONTACT US</span>
                     <div className="flex flex-col gap-2 lg:items-end">
                         <a href="tel:+2347049001510" className="text-lg lg:text-xl font-bold text-primary dark:text-white uppercase leading-tight tracking-widest hover:opacity-50 transition-opacity">+234 704 900 1510</a>
