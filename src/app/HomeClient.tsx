@@ -182,7 +182,7 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                                 Architecture shaped by idea, context, and precision.
                             </h1>
                             <p className="text-lg lg:text-xl font-light text-primary/60 dark:text-white/60 max-w-md leading-relaxed">
-                                Here at Vartex Architects we design buildings that last, combining solid engineering with creative and thoughtful design.
+                                VARTEX designs buildings that last, combining solid engineering with creative, thoughtful design.
                             </p>
                         </div>
 
@@ -300,9 +300,9 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                 <section className="px-8 lg:px-24 py-24 lg:py-40 flex flex-col gap-24" aria-label="Selected architectural works">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 border-b border-neutral-100 dark:border-white/5 pb-8">
                         <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">Selected Works</h2>
-                        <Link href="/portfolio" aria-label="View all archived projects" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
+                        <Link href="/portfolio" aria-label="View all archived projects" className="self-end sm:self-auto font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2 whitespace-nowrap">
                             SEE MORE PROJECTS
-                            <ArrowUpRight size={11} />
+                            <ArrowUpRight size={16} />
                         </Link>
                     </div>
 
@@ -397,9 +397,9 @@ export default function HomeClient({ featuredProjects, selectedWorks, allProject
                         <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">02 / PROCESS</span>
                         <div className="flex justify-between items-end">
                             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">From Sketch to Stone</h2>
-                            <Link href="/process" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2">
+                            <Link href="/process" className="font-mono text-[10px] tracking-[0.3em] text-primary dark:text-white hover:text-primary/70 dark:hover:text-white/70 transition-colors uppercase inline-flex items-center gap-2 whitespace-nowrap">
                                 VIEW DETAILED PROCESS
-                                <ArrowUpRight size={11} />
+                                <ArrowUpRight size={16} />
                             </Link>
                         </div>
                     </div>
