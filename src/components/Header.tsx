@@ -67,10 +67,10 @@ export default function Header() {
                             key={item.name}
                             href={item.href}
                             className={cn(
-                                "font-mono text-[10px] tracking-[0.3em] transition-all hover:opacity-100 uppercase",
+                                "font-mono text-[10px] font-bold tracking-[0.3em] transition-all hover:opacity-100 uppercase",
                                 pathname === item.href
-                                    ? "text-primary dark:text-white opacity-100 font-bold"
-                                    : "text-primary dark:text-white opacity-40"
+                                    ? "text-primary dark:text-white opacity-100"
+                                    : "text-primary dark:text-white opacity-60"
                             )}
                         >
                             {item.name}
