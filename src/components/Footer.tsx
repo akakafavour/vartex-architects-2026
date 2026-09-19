@@ -18,7 +18,7 @@ export default function Footer() {
                 {/* Brand Column */}
                 <div className="lg:col-span-4 flex flex-col gap-1 lg:gap-2">
                     <div className="flex flex-col gap-0 items-start">
-                        <div className="relative">
+                        <div className="relative lg:-mt-3.5">
                             {/* Light mode: black logo */}
                             <Image
                                 src="/brand-logo-light-transparent.png"
@@ -43,11 +43,11 @@ export default function Footer() {
                 </div>
 
                 {/* Social Column / SVG Icons on mobile, text on desktop */}
-                <div className="lg:col-span-2 lg:col-start-5 flex flex-col gap-4 lg:gap-8">
+                <div className="lg:col-span-3 lg:col-start-5 flex flex-col gap-4 lg:gap-6">
                     <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">SOCIALS</span>
 
                     {/* SVG Icons / visible on both mobile and desktop */}
-                    <nav className="flex flex-wrap gap-4 lg:gap-5 items-center">
+                    <nav className="grid grid-cols-5 gap-x-3 gap-y-3 lg:gap-x-4 place-items-start">
                         {/* Instagram */}
                         <a href="https://www.instagram.com/vartex_architects?igsh=MWsxNDJqZmJ4aXEwNA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-40 transition-opacity text-primary dark:text-white">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -129,12 +129,12 @@ export default function Footer() {
 
 
                 {/* Contact Column */}
-                <div className="lg:col-span-3 lg:col-start-10 flex flex-col gap-4 lg:gap-8 lg:text-right">
+                <div className="lg:col-span-5 lg:col-start-8 flex flex-col gap-3 lg:gap-3 lg:text-right">
                     <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">CONTACT US</span>
-                    <div className="flex flex-col gap-2 lg:items-end">
-                        <a href="tel:+2347049001510" className="text-lg lg:text-xl font-bold text-primary dark:text-white uppercase leading-tight tracking-widest hover:opacity-50 transition-opacity">+234 704 900 1510</a>
-                        <a href="tel:+2347032697179" className="text-lg lg:text-xl font-bold text-primary dark:text-white uppercase leading-tight tracking-widest hover:opacity-50 transition-opacity">+234 703 269 7179</a>
-                        <a href="mailto:info@vartexarchitects.com" className="text-lg lg:text-xl font-bold text-primary dark:text-white hover:opacity-50 transition-opacity break-words">info@vartexarchitects.com</a>
+                    <div className="flex flex-col gap-1.5 lg:items-end">
+                        <a href="tel:+2347049001510" className="text-lg font-bold text-primary dark:text-white uppercase leading-none tracking-widest hover:opacity-50 transition-opacity">+234 704 900 1510</a>
+                        <a href="tel:+2347032697179" className="text-lg font-bold text-primary dark:text-white uppercase leading-none tracking-widest hover:opacity-50 transition-opacity">+234 703 269 7179</a>
+                        <a href="mailto:info@vartexarchitects.com" className="text-lg font-bold text-primary dark:text-white leading-none hover:opacity-50 transition-opacity break-words">info@vartexarchitects.com</a>
                     </div>
                 </div>
 

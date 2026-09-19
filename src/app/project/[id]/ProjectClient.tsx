@@ -110,7 +110,7 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                 ) : (
                     <>
                         {/* Hero Section */}
-                        <section className="relative min-h-[70vh] flex flex-col px-8 lg:px-24 pt-32 pb-8 bg-[#0a0a0a] overflow-hidden">
+                        <section className="relative flex flex-col px-8 lg:px-24 pt-32 pb-12 bg-[#0a0a0a] overflow-hidden">
                             {/* Background Detail */}
                             <div className="absolute inset-0 z-0 opacity-15 pointer-events-none bg-[#0a0a0a]">
                                 <div className="absolute inset-0"></div>

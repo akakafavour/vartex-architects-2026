@@ -88,6 +88,9 @@ export default function ProcessPage() {
                 const num = container.querySelector(".step-number");
                 const img = container.querySelector(".process-image");
                 const text = container.querySelector(".text-content");
+                // Steps already inside the viewport on page load must reveal
+                // immediately instead of waiting for the first scroll.
+                const visibleOnLoad = container.getBoundingClientRect().top < window.innerHeight;
 
                 gsap.fromTo(num,
                     { opacity: 0.1 },
@@ -103,26 +106,31 @@ export default function ProcessPage() {
                     }
                 );
 
-                gsap.from(img, {
-                    clipPath: "inset(100% 0 0 0)",
-                    duration: 1.5,
-                    ease: "power4.out",
-                    scrollTrigger: {
-                        trigger: container,
-                        start: "top 70%",
-                    }
-                });
+                if (visibleOnLoad) {
+                    gsap.from(img, { clipPath: "inset(100% 0 0 0)", duration: 1.5, delay: 0.4, ease: "power4.out" });
+                    gsap.from(text, { x: -50, opacity: 0, duration: 1, delay: 0.5, ease: "power3.out" });
+                } else {
+                    gsap.from(img, {
+                        clipPath: "inset(100% 0 0 0)",
+                        duration: 1.5,
+                        ease: "power4.out",
+                        scrollTrigger: {
+                            trigger: container,
+                            start: "top 70%",
+                        }
+                    });
 
-                gsap.from(text, {
-                    x: -50,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: container,
-                        start: "top 70%",
-                    }
-                });
+                    gsap.from(text, {
+                        x: -50,
+                        opacity: 0,
+                        duration: 1,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: container,
+                            start: "top 70%",
+                        }
+                    });
+                }
             });
         });
         return () => ctx.revert();
@@ -137,7 +145,7 @@ export default function ProcessPage() {
                 {/* Intro Section */}
                 <div className="flex flex-col gap-12 max-w-5xl fade-in">
                     <div className="flex flex-col gap-6">
-                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">02 / OUR METHODOLOGY</span>
+                        <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">OUR METHODOLOGY</span>
                         <h1 className="text-6xl lg:text-[8rem] font-black tracking-tighter leading-[0.85] text-primary dark:text-white uppercase">
                             Sketch <br /> To Stone.
                         </h1>

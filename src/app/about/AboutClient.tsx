@@ -127,7 +127,7 @@ export default function About({ founderImage }: { founderImage?: string }) {
                     <section className="flex flex-col gap-12 border-t border-neutral-100 dark:border-white/5 pt-24 fade-in">
                         <div className="flex justify-between items-end">
                             <div className="flex flex-col gap-2">
-                                <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">01 / ACCOLADES</span>
+                                <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">ACCOLADES</span>
                                 <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-primary dark:text-white">Recognition.</h2>
                             </div>
                             <span className="font-mono text-[9px] tracking-widest text-primary/20 dark:text-white/20 uppercase hidden sm:block">CURATED SELECTION / 2020/2025</span>
