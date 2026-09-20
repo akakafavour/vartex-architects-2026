@@ -47,7 +47,7 @@ export default function Footer() {
                     <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">SOCIALS</span>
 
                     {/* SVG Icons / visible on both mobile and desktop */}
-                    <nav className="grid grid-cols-5 gap-x-3 gap-y-3 lg:gap-x-4 place-items-start">
+                    <nav className="grid grid-cols-10 gap-x-2.5 gap-y-3 sm:grid-cols-5 lg:gap-x-4 place-items-start">
                         {/* Instagram */}
                         <a href="https://www.instagram.com/vartex_architects?igsh=MWsxNDJqZmJ4aXEwNA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-40 transition-opacity text-primary dark:text-white">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

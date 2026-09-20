@@ -366,23 +366,37 @@ export default function ServicesClient({ initialPage = "index" }: { initialPage?
     useEffect(() => {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const ctx = gsap.context(() => {
-            gsap.utils.toArray<HTMLElement>(".service-reveal:not(.service-card)").forEach((element, index) => {
-                gsap.from(element, { y: 28, duration: 0.65, delay: Math.min(index * 0.03, 0.25), ease: "power3.out", scrollTrigger: { trigger: element, start: "top 88%", once: true } });
+            // Homepage-style entrance: anything already inside the viewport on
+            // load fades in with a stagger; elements below the fold keep their
+            // scroll reveal.
+            const loadElements = gsap.utils.toArray<HTMLElement>(".service-reveal:not(.service-card)")
+                .filter((element) => element.getBoundingClientRect().top < window.innerHeight);
+            if (loadElements.length) {
+                gsap.from(loadElements, { y: 30, opacity: 0, duration: 1, stagger: 0.12, ease: "power3.out", delay: 0.1 });
+            }
+            gsap.utils.toArray<HTMLElement>(".service-reveal:not(.service-card)").forEach((element) => {
+                if (loadElements.includes(element)) return;
+                gsap.from(element, { y: 28, duration: 0.65, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 88%", once: true } });
             });
-            gsap.utils.toArray<HTMLElement>(".service-card-image-stage").forEach((stage) => {
+            gsap.utils.toArray<HTMLElement>(".service-card-image-stage").forEach((stage, index) => {
                 const image = stage.querySelector<HTMLElement>(".service-card-image");
                 if (!image) return;
                 // Clip-only reveal: the image element carries CSS transition-transform
                 // classes for the hover/tap zoom, so GSAP must never write transform
                 // properties on it — a GSAP yPercent here gets re-smoothed by the CSS
                 // transition every frame and reads as a bounce/snap-back.
-                gsap.fromTo(image, { clipPath: "inset(100% 0 0 0)" }, {
-                    clipPath: "inset(0% 0 0 0)",
-                    duration: 0.55,
-                    ease: "power3.out",
-                    clearProps: "clipPath",
-                    scrollTrigger: { trigger: stage, start: "top 92%", once: true }
-                });
+                const visibleOnLoad = stage.getBoundingClientRect().top < window.innerHeight;
+                if (visibleOnLoad) {
+                    gsap.fromTo(image,
+                        { clipPath: "inset(100% 0 0 0)", opacity: 0.4 },
+                        { clipPath: "inset(0% 0 0 0)", opacity: 1, duration: 0.9, delay: 0.4 + index * 0.15, ease: "power3.out", clearProps: "clipPath,opacity" }
+                    );
+                } else {
+                    gsap.fromTo(image,
+                        { clipPath: "inset(100% 0 0 0)" },
+                        { clipPath: "inset(0% 0 0 0)", duration: 0.9, ease: "power3.out", clearProps: "clipPath", scrollTrigger: { trigger: stage, start: "top 92%", once: true } }
+                    );
+                }
             });
             gsap.utils.toArray<HTMLElement>(".service-image-stage").forEach((stage) => {
                 const media = stage.querySelector<HTMLElement>(".service-detail-media");

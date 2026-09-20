@@ -135,6 +135,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                                         src={project.image}
                                         alt={project.title}
                                         fill
+                                        priority={index < 2}
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover brightness-100 group-hover:brightness-110 group-hover:scale-105 transition-all duration-700 ease-out"
                                     />

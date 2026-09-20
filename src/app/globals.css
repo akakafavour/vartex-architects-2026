@@ -36,22 +36,33 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Hide scrollbars site-wide while keeping scroll functionality */
+/* Thin branded scrollbar, visible on every page. The stable gutter reserves
+   its width so it can appear/disappear without ever shifting the page sideways. */
 html {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(130, 130, 130, 0.55) transparent;
 }
 
 html::-webkit-scrollbar {
-    display: none;
+    width: 10px;
+    height: 10px;
 }
 
-::-webkit-scrollbar {
-    display: none;
+html::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-* {
-    scrollbar-width: none;
+html::-webkit-scrollbar-thumb {
+    background: rgba(130, 130, 130, 0.45);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: rgba(130, 130, 130, 0.7);
+    background-clip: content-box;
 }
 
 /* Restore scrollbars inside the Sanity Studio admin (/admin) */

@@ -120,7 +120,7 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                             <div className="relative z-10 mb-8 w-full">
                                 <Link
                                     href="/portfolio"
-                                    className="inline-flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group cursor-pointer relative z-30 py-2"
+                                    className="flex w-fit items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group cursor-pointer relative z-30 py-2 pr-3 -ml-1"
                                 >
                                     <ArrowLeft size={14} className="group-hover:-translate-x-1.5 transition-transform duration-300 shrink-0 text-white/40 group-hover:text-white" />
                                     <span className="font-mono text-[10px] tracking-[0.4em] uppercase hover:underline underline-offset-4 decoration-white/20 hover:decoration-white transition-all">PROJECTS // {project.title}</span>
