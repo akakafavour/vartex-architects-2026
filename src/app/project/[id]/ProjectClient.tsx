@@ -129,7 +129,7 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
 
                             {/* Main Title Area */}
                             <div className="relative z-10 w-full mb-16 lg:pl-0">
-                                <h1 className="text-6xl md:text-9xl lg:text-[11rem] xl:text-[13rem] font-black leading-[0.8] tracking-tighter uppercase text-white flex flex-wrap gap-x-6 md:gap-x-12">
+                                <h1 className="pointer-events-none select-none text-6xl md:text-9xl lg:text-[11rem] xl:text-[13rem] font-black leading-[0.8] tracking-tighter uppercase text-white flex flex-wrap gap-x-6 md:gap-x-12">
                                     {project.title.split(' ').map((word, idx) => (
                                         <span
                                             key={idx}
@@ -187,6 +187,8 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                                                 alt={`${project.title} - Image ${i + 1}`}
                                                 width={2400}
                                                 height={1350}
+                                                loading={i < 2 ? "eager" : "lazy"}
+                                                priority={i === 0}
                                                 className="w-full h-auto object-cover"
                                             />
                                         </div>
