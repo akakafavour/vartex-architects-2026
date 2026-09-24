@@ -186,11 +186,11 @@ export default function JournalPostClient({ post, relatedPosts, prevPost, nextPo
                     {/* Back Button */}
                     <Link
                         href="/journal"
-                        className="absolute top-24 lg:top-32 left-8 lg:left-24 flex items-center gap-2 text-white/90 hover:text-white transition-colors duration-300 z-10"
+                        className="absolute top-24 lg:top-32 left-8 lg:left-24 flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 group cursor-pointer z-10"
                         style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
                     >
-                        <ArrowLeft size={14} />
-                        <span className="font-mono text-[10px] tracking-[0.3em] uppercase">Back to Journal</span>
+                        <ArrowLeft size={14} className="group-hover:-translate-x-1.5 transition-transform duration-300 shrink-0 text-white/60 group-hover:text-white" />
+                        <span className="font-mono text-[10px] tracking-[0.3em] uppercase group-hover:underline underline-offset-4 decoration-white/20 group-hover:decoration-white transition-all">Back to Journal</span>
                     </Link>
 
                     {/* Title Overlay */}

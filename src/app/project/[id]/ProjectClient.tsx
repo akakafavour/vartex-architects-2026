@@ -71,16 +71,20 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                 ease: "power3.out",
             });
 
-            gsap.from(".image-scroll-item", {
-                scrollTrigger: {
-                    trigger: ".images-container",
-                    start: "top 80%",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out"
+            // Gallery items already inside the viewport on load must render
+            // immediately — on tall screens a scroll-trigger here left the
+            // visible image blank until the first scroll.
+            gsap.utils.toArray<HTMLElement>(".image-scroll-item").forEach((item, index) => {
+                const visibleOnLoad = item.getBoundingClientRect().top < window.innerHeight;
+                gsap.from(item, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    ...(visibleOnLoad
+                        ? { delay: 0.3 + index * 0.1 }
+                        : { scrollTrigger: { trigger: item, start: "top 85%" } }),
+                });
             });
         }, mainRef);
         return () => ctx.revert();

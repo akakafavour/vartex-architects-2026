@@ -45,3 +45,5 @@ GMB-Client-Handover-Guide.md
 
 # Local workspace
 .zcode/
+.openchamber/
+ordered-upload/

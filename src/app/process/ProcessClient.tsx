@@ -140,7 +140,7 @@ export default function ProcessPage() {
         <div className="flex flex-col min-h-screen bg-white dark:bg-background-dark">
             <Header />
 
-            <main ref={mainRef} className="flex-grow pt-16 pb-12 lg:pt-24 lg:pb-16 px-8 lg:px-24 flex flex-col gap-16 lg:gap-32 overflow-hidden">
+            <main ref={mainRef} className="flex-grow pt-16 pb-12 lg:pt-[164px] lg:pb-16 px-8 lg:px-24 flex flex-col gap-16 lg:gap-32 overflow-hidden">
 
                 {/* Intro Section */}
                 <div className="flex flex-col gap-12 max-w-5xl fade-in">
