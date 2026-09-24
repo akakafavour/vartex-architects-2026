@@ -228,7 +228,7 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                                 {prevProject ? (
                                     <Link
                                         href={`/project/${prevProject.id || prevProject.slug}`}
-                                        className="group p-8 lg:p-16 border-b md:border-b-0 md:border-r border-neutral-100 dark:border-white/5 hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors duration-300"
+                                        className="group cursor-pointer p-8 lg:p-16 border-b md:border-b-0 md:border-r border-neutral-100 dark:border-white/5 hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors duration-300"
                                     >
                                         <span className="font-mono text-[9px] tracking-[0.3em] text-primary/40 dark:text-white/40 uppercase mb-4 block">← Previous Project</span>
                                         <h4 className="text-2xl lg:text-3xl font-black uppercase tracking-tighter text-primary dark:text-white group-hover:text-primary/70 dark:group-hover:text-white/70 transition-colors">
@@ -242,7 +242,7 @@ export default function ProjectClient({ project, prevProject, nextProject, relat
                                 {nextProject ? (
                                     <Link
                                         href={`/project/${nextProject.id || nextProject.slug}`}
-                                        className="group p-8 lg:p-16 text-right hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors duration-300"
+                                        className="group cursor-pointer p-8 lg:p-16 text-right hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors duration-300"
                                     >
                                         <span className="font-mono text-[9px] tracking-[0.3em] text-primary/40 dark:text-white/40 uppercase mb-4 block">Next Project →</span>
                                         <h4 className="text-2xl lg:text-3xl font-black uppercase tracking-tighter text-primary dark:text-white group-hover:text-primary/70 dark:group-hover:text-white/70 transition-colors">

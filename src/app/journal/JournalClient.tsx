@@ -119,8 +119,8 @@ export default function JournalClient({ initialPosts, isGlobalComingSoon }: Jour
                 ) : (
                     <>
                         {/* Hero Header */}
-                        <section className="px-8 lg:px-24 pt-24 pb-12 lg:pt-32 lg:pb-16 border-b border-neutral-100 dark:border-white/5 fade-in">
-                            <span className="font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">
+                        <section className="px-8 lg:px-24 pt-[104px] pb-12 lg:pt-32 lg:pb-16 border-b border-neutral-100 dark:border-white/5 fade-in">
+                            <span className="block font-mono text-[10px] tracking-[0.4em] text-primary/40 dark:text-white/40 uppercase">
                                 Reflections / Discourse / Process
                             </span>
                             <h1 className="text-5xl lg:text-9xl font-black uppercase tracking-tighter leading-none text-primary dark:text-white mt-4">
@@ -157,10 +157,12 @@ export default function JournalClient({ initialPosts, isGlobalComingSoon }: Jour
                                 <section className="grid grid-cols-1 lg:grid-cols-2 border-b border-neutral-100 dark:border-white/5 fade-in">
                                     <div className="relative aspect-[4/3] lg:aspect-auto overflow-hidden">
                                         {featuredPost.image ? (
-                                            <Image
+                                                                                        <Image
                                                 src={featuredPost.image}
                                                 alt={featuredPost.title}
                                                 fill
+                                                priority
+                                                loading="eager"
                                                 className="object-cover group-hover:scale-105 transition-all duration-700"
                                                 sizes="(max-width: 1024px) 100vw, 50vw"
                                             />
@@ -219,7 +221,7 @@ export default function JournalClient({ initialPosts, isGlobalComingSoon }: Jour
                         {/* Posts Grid */}
                         <section className="px-8 lg:px-24 py-16 lg:py-24">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                                {currentPosts.map((post) => {
+                                {currentPosts.map((post, i) => {
                                     const PostWrapper = post.isComingSoon ? 'div' : Link;
                                     const wrapperProps = post.isComingSoon 
                                         ? { className: "post-card flex flex-col cursor-default" } 
@@ -233,10 +235,11 @@ export default function JournalClient({ initialPosts, isGlobalComingSoon }: Jour
                                         {/* Image */}
                                         <div className="relative aspect-[3/2] overflow-hidden mb-6">
                                             {post.image ? (
-                                                <Image
+                                                                                                <Image
                                                     src={post.image}
                                                     alt={post.title}
                                                     fill
+                                                    loading={i < 2 ? "eager" : "lazy"}
                                                     className="object-cover group-hover:scale-105 transition-all duration-700"
                                                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                                 />
