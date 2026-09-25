@@ -140,7 +140,7 @@ export default function JournalClient({ initialPosts, isGlobalComingSoon }: Jour
                                         onClick={() => setActiveCategory(cat!)}
                                         role="tab"
                                         aria-selected={activeCategory === cat}
-                                        className={`font-mono text-[10px] tracking-[0.3em] uppercase py-2 border-b-2 transition-all duration-300 ${activeCategory === cat
+                                        className={`font-mono text-[10px] tracking-[0.3em] uppercase py-2 border-b-2 transition-all duration-300 cursor-pointer ${activeCategory === cat
                                             ? "border-primary dark:border-white text-primary dark:text-white"
                                             : "border-transparent text-primary/40 dark:text-white/40 hover:text-primary/70 dark:hover:text-white/70"
                                             }`}

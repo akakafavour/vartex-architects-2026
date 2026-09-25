@@ -99,7 +99,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                                 onClick={() => setFilter(cat)}
                                 role="tab"
                                 aria-selected={filter === cat}
-                                className={`px-4 py-2 font-mono text-xs uppercase tracking-widest transition-all duration-300 relative ${filter === cat ? "text-primary dark:text-white" : "text-primary/40 dark:text-white/40 hover:text-primary dark:hover:text-white"
+                                className={`px-4 py-2 font-mono text-xs uppercase tracking-widest transition-all duration-300 relative cursor-pointer ${filter === cat ? "text-primary dark:text-white" : "text-primary/40 dark:text-white/40 hover:text-primary dark:hover:text-white"
                                     }`}
                             >
                                 {cat}

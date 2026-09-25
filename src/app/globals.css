@@ -36,6 +36,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Every clickable button shows the hand cursor site-wide; disabled buttons
+   keep the default arrow so their inactive state stays obvious. */
+button:not(:disabled) {
+    cursor: pointer;
+}
+
 /* Thin branded scrollbar, visible on every page. The stable gutter reserves
    its width so it can appear/disappear without ever shifting the page sideways. */
 html {
