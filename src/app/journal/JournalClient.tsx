@@ -300,7 +300,7 @@ export default function JournalClient({ initialPosts, isGlobalComingSoon }: Jour
                                     <button
                                         key={i}
                                         onClick={() => paginate(i + 1)}
-                                        className={`w-8 h-8 rounded-full font-mono text-xs transition-colors duration-300 ${currentPage === i + 1
+                                            className={`w-8 h-8 rounded-full font-mono text-xs transition-colors duration-300 cursor-pointer ${currentPage === i + 1
                                             ? "bg-primary text-white dark:bg-white dark:text-primary"
                                             : "bg-neutral-100 text-primary dark:bg-neutral-800 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-700"
                                             }`}

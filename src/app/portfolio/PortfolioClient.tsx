@@ -197,7 +197,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                         <button
                             onClick={() => paginate(Math.max(1, currentPage - 1))}
                             disabled={currentPage === 1}
-                            className="font-mono text-[10px] tracking-[0.3em] uppercase transition-colors disabled:opacity-20 hover:text-primary dark:hover:text-white"
+                            className="font-mono text-[10px] tracking-[0.3em] uppercase transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-20 hover:text-primary dark:hover:text-white"
                         >
                             [ PREV ]
                         </button>
@@ -207,7 +207,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                                 <button
                                     key={i}
                                     onClick={() => paginate(i + 1)}
-                                    className={`w-8 h-8 flex items-center justify-center font-mono text-xs transition-colors duration-300 ${currentPage === i + 1
+                                    className={`w-8 h-8 flex items-center justify-center font-mono text-xs transition-colors duration-300 cursor-pointer ${currentPage === i + 1
                                         ? "bg-primary text-white dark:bg-white dark:text-primary"
                                         : "bg-neutral-50 text-primary/40 dark:bg-neutral-900 dark:text-white/40 hover:bg-neutral-100 dark:hover:bg-white/5"
                                         }`}
@@ -220,7 +220,7 @@ export default function PortfolioClient({ projects }: PortfolioClientProps) {
                         <button
                             onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
                             disabled={currentPage === totalPages}
-                            className="font-mono text-[10px] tracking-[0.3em] uppercase transition-colors disabled:opacity-20 hover:text-primary dark:hover:text-white"
+                            className="font-mono text-[10px] tracking-[0.3em] uppercase transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-20 hover:text-primary dark:hover:text-white"
                         >
                             [ NEXT ]
                         </button>
