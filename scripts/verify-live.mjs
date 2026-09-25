@@ -3,7 +3,7 @@ const query = `*[_type == "project"] | order(coalesce(order, 0) asc) {
   "slug": slug.current,
   "mainImage": mainImage.asset->url,
   "galleryCount": count(gallery),
-  "firstGalleryImage": gallery[0].asset->url
+  "gallery": gallery[].asset->url
 }`;
 
 const url = "https://a4s65bdv.api.sanity.io/v1/data/query/production?query=" + encodeURIComponent(query);
@@ -16,7 +16,9 @@ fetch(url)
       console.log(`\nProject: ${p.title} (${p.slug})`);
       console.log(`  Thumbnail (mainImage): ${p.mainImage}`);
       console.log(`  Gallery Count: ${p.galleryCount}`);
-      console.log(`  First Gallery Image: ${p.firstGalleryImage}`);
+      if (p.gallery && p.gallery.length > 0) {
+        p.gallery.forEach((url, i) => console.log(`    [${i}] ${url}`));
+      }
     }
   })
   .catch(console.error);
